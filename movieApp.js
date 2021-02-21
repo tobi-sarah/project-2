@@ -29,7 +29,7 @@ movieApp.getMovies = () => {
         .then((jsonResponse) => {
             console.log(jsonResponse)
 
-            // pass the data into the displayPhotos method
+            // pass the data into the displayMovies method
             // AKA call the displayMovies within getMovies
             movieApp.displayMovies(jsonResponse)
         }) 
