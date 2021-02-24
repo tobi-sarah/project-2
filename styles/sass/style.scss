@@ -1,0 +1,123 @@
+@import "./partials/setup";
+@import "./partials/mixins";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #20717c;
+  text-align: center;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-bottom: 3rem;
+}
+
+
+h1 {
+  @include h1Font;
+}
+
+h2 {
+  @include h2Font;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+select {
+  font-family: "Work Sans", sans-serif;
+  width: 350px;
+  -webkit-appearance: none;
+  padding: 14px 10px;
+  font-size: 21px;
+  border: 2px solid #01b4e4;
+  border-radius: 0;
+  color: #0d253f;
+  outline: none;
+}
+
+input[type="submit"] {
+  font-family: "Work Sans", sans-serif;
+  background: #7ab4c4;
+  border: 0;
+  font-size: 24px;
+  color: white;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
+  margin-top: 25px;
+  list-style-type: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 13px 10px 12px 10px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.title:hover {
+  color: #01b4e4;
+}
+
+.releaseDate {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  padding: 2rem 0 1.5rem;
+  margin-top: 3rem;
+  background-color: #0d253f;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+
+  a {
+    color: #ffffff;
+  }
+}
+

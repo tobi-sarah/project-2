@@ -1,0 +1,19 @@
+@mixin h1Font() {
+  font-family: ‘Lato’, sans-serif;
+  color: #efedce;
+  letter-spacing: 0.1em;
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+@mixin h2Font() {
+  font-family: ‘Lato’, sans-serif;
+  font-size: 3rem;
+  padding: 1rem 0 3rem;
+}
+
+@mixin select() {
+  padding: 1rem 1.2rem
+}

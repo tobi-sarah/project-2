@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=“preconnect” href=“https://fonts.gstatic.com”>
+    <link href=“https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap” rel=“stylesheet”>
     <link rel="stylesheet" href="./styles/style.css">
     <title>MOVIE DATABASE!</title>
 </head>
+
 <body>
-    <div class=“wrapper”>
-        <header class=“heading”>
-            <h1>Movie Database 😎</h1>
-            <p>Please select a movie genre!</p>
+    <div class="wrapper">
+        <header class="heading">
+            <h1>Movie Database</h1>
+            <h2>Please select a movie genre!</h2>
             <form>
                 <select name="" id="">
+                    <option value=""> Select</option>
                     <option value="28"> Action</option>
                     <option value="12"> Adventure</option>
                     <option value="16"> Animation</option>
@@ -34,7 +39,7 @@
                     <option value="37"> Western</option>
                 </select>
                 <input type="submit" value="Submit" />
-            </form> 
+            </form>
         </header>
         <main>
             <ul>
@@ -42,6 +47,10 @@
             </ul>
         </main>
     </div>
+    <footer>
+        <p>Created at <a href="www.junocollege.com">Juno College</a></p>
+    </footer>
     <script src="movieApp.js"></script>
 </body>
+
 </html>
