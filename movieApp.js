@@ -25,6 +25,11 @@ movieApp.getMovies = () => {
         })
          // parse the JSON promise response and log out readable data (AKA data in JSON format)
         .then((jsonResponse) => {
+<<<<<<< HEAD
+=======
+            console.log(jsonResponse)
+
+>>>>>>> 04c134cf29f42823718278763fb410def952e973
             // pass the data into the displayMovies method
             // AKA call the displayMovies within getMovies
             movieApp.displayMovies(jsonResponse)
