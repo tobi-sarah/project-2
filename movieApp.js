@@ -1,3 +1,4 @@
+// create namespacing
 const movieApp = {}
 // save relevant API information
 movieApp.apiUrl = "https://api.themoviedb.org/3/discover/movie";
@@ -5,8 +6,6 @@ movieApp.apiKey = "c096bc45d50fcc852c2cf237d6dab960";
 movieApp.posterUrl = `https://image.tmdb.org/t/p/original`;
 
 // create a method (function in the app object) which requests information from the API
-// logs it to the console
-
 movieApp.getMovies = () => {
     // use the URL constructor to specify the parameters we wish to include in our API endpoint (AKA in the request we are making to the API)
     const url = new URL(movieApp.apiUrl);
@@ -20,16 +19,13 @@ movieApp.getMovies = () => {
     // pass in new url featuring params provided by the URLSearchParams constructor
     fetch(url)
         .then((response) => {
-            console.log(response)
             //parse this response into JSON
             //return JSON response so that it can be used in the next function
             return response.json();
         })
          // parse the JSON promise response and log out readable data (AKA data in JSON format)
         .then((jsonResponse) => {
-            console.log(jsonResponse)
-
-            // pass the data into the displayPhotos method
+            // pass the data into the displayMovies method
             // AKA call the displayMovies within getMovies
             movieApp.displayMovies(jsonResponse)
         }) 
@@ -38,13 +34,14 @@ movieApp.getMovies = () => {
 // create genreId function
 movieApp.genreId = () => {
     let genreId = document.querySelector('select').value;
-    console.log(genreId)
     return genreId;
 }; 
 
+// create displayMovies method
+// create elements for movie details
+// append data to the elements
 movieApp.displayMovies = (apiData) => {
     apiData.results.forEach ((data)  => {
-        // console.log(data)
         const gallery = document.createElement('li') 
         const poster = document.createElement('img')
         const movieDetails = document.createElement('div')
@@ -62,6 +59,10 @@ movieApp.displayMovies = (apiData) => {
     })
 }
 
+// create changeGenre method
+// prevent default page refresh on submit
+// create event listener on submit
+// call in getMovies 
 movieApp.changeGenre = () => {
     movieApp.form.addEventListener("submit", function(event){
         event.preventDefault();
